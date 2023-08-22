@@ -88,7 +88,6 @@ let cronometro = setInterval(function () {
  
  function tamanhoAleatorio () {
    let classe = Math.floor(Math.random() * 3)
-   console.log(classe)
 
    switch (classe) {
       case 0:
@@ -115,4 +114,3 @@ let cronometro = setInterval(function () {
  }
 
 
- 

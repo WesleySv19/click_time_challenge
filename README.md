@@ -1,2 +1,13 @@
-# Project_mata_mosquito
- Meu primeiro repositório utilizando as principais tecnologias Front-End, HTML, CSS, JavaScript e Bootstrap. Curso na plataforma Udemy, com instrutor Jorge Saint Ana.
+# Projeto Mata mosquito
+![](./img/projetoMataMosquito.png)
+## Projeto feito com instrução do professor Jorge Saint Ana pela plataforma Udemy.
+---
+## Ideias iniciais:
+- Compreender a base do Javascript. 
+- Implementar melhorias ao projeto conforme eu fosse aprendendo mais sobre a linguagem.
+---
+## Tecnologias Utilizadas:
+- HTML
+- CSS
+- BOOTSTRAP
+- JAVASCRIPT
