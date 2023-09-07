@@ -4,29 +4,20 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>App-Mata-Mosquito</title>
-        <script src="script.js"></script>
+        <title>Click-Time-Challenge</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body onresize="ajustaTamanhoPalcoJogo()">
+    <body>
 
         <div class="painel">
             <div class="vidas">
-                <img id="v1" src="img/coracao_cheio.png" alt="">
-                <img id="v2" src="img/coracao_cheio.png" alt="">
-                <img id="v3" src="img/coracao_cheio.png" alt="">
+                <img id="v1" src="img/life.png" alt="">
+                <img id="v2" src="img/life.png" alt="">
+                <img id="v3" src="img/life.png" alt="">
             </div>
 
             <div class="cronometro"> Tempo restante: <span id="cronometro"></span></div>
         </div>
-
-        <script>
-             document.getElementById('cronometro') .innerHTML = tempo
-
-            posicaoRandomica()
-            let criaMosquito = setInterval(function() {
-                posicaoRandomica()
-            }, criaMosquitoTempo)
-        </script>
+        <script src="js/script.js"></script>
     </body>
 </html>
