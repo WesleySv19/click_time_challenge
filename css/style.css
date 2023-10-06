@@ -13,15 +13,34 @@ h1 {
     border-bottom: 3px solid #000;
 }
 
-.circle {
+.circleEasy {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.circleMedium {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
-    background-color: #000;
     z-index: 10;
 }
+
+.circleHard {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
 
 .painel {
     position: absolute;
