@@ -1,11 +1,14 @@
-const colors = ['#0000FF', '#000', '#FF0000', '#FFFF00', '#32CD32', '#8B008B', '#FF4500']
+const colors = ['#0000FF', '#FF0000', '#FFFF00', '#32CD32', '#8B008B', '#FF4500', '#FFF', '#8B4513', '#FF69B4']
 const circle = document.createElement('div')
+let clicks = 0
+const clickCount = document.querySelector('#result')
+
 const getRandomPosition = () => {
     let x = Math.floor(Math.random() * widthScreen) - 90
     let y = Math.floor(Math.random() * heightSreen) - 90
     x = x < 0 ? 0 : x
     y = y < 0 ? 0 : y
-    return { x, y }  
+    return { x, y }
 }
 
 const getRandomColor = () => {
@@ -13,14 +16,19 @@ const getRandomColor = () => {
     return colors[randomIndex]
 }
 
+const clickSound = () => {
+    const audio = new Audio('../audio/click.mp3')
+    audio.play()
+}
+
 const dificult = () => {
     const urlParams = new URLSearchParams(window.location.search)
     const level = urlParams.get('level')
-    if(level === 'easy') {
+    if (level === 'easy') {
         return 'circleEasy'
-    } else if(level === 'medium') {
+    } else if (level === 'medium') {
         return 'circleMedium'
-    } else if(level === 'hard') {
+    } else if (level === 'hard') {
         return 'circleHard'
     }
 }
@@ -33,13 +41,15 @@ const updateCircle = () => {
     circle.style.left = position.x + 'px'
     circle.style.top = position.y + 'px'
     circle.style.position = 'absolute'
-    
+
 }
 
 updateCircle()
 
-
 circle.addEventListener('click', () => {
+    clicks += 1
     updateCircle()
+    clickSound()
+    clickCount.innerHTML = clicks
+    
 });
-
