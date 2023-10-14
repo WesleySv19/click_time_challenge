@@ -17,7 +17,7 @@ const getRandomColor = () => {
 }
 
 const clickSound = () => {
-    const audio = new Audio('../audio/click.mp3')
+    const audio = new Audio('./audio/click.mp3')
     audio.play()
 }
 
