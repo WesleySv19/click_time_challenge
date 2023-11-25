@@ -2,6 +2,7 @@ const colors = ['#0000FF', '#FF0000', '#FFFF00', '#32CD32', '#8B008B', '#FF4500'
 const circle = document.createElement('div')
 let clicks = 0
 const clickCount = document.querySelector('#result')
+let timeUpdateCircle = 0
 
 const getRandomPosition = () => {
     let x = Math.floor(Math.random() * widthScreen) - 90
@@ -25,17 +26,24 @@ const dificult = () => {
     const urlParams = new URLSearchParams(window.location.search)
     const level = urlParams.get('level')
     if (level === 'easy') {
+        timeUpdateCircle = 2000
         return 'circleEasy'
+        
     } else if (level === 'medium') {
+        timeUpdateCircle = 1000
         return 'circleMedium'
+
     } else if (level === 'hard') {
+        timeUpdateCircle = 900
         return 'circleHard'
     }
 }
 
+dificult()
+
 setInterval(() => {
     updateCircle()
-}, 1000)
+}, timeUpdateCircle)
 
 const updateCircle = () => {
     circle.className = dificult()
