@@ -33,6 +33,10 @@ const dificult = () => {
     }
 }
 
+setInterval(() => {
+    updateCircle()
+}, 3000)
+
 const updateCircle = () => {
     circle.className = dificult()
     const position = getRandomPosition();
@@ -41,7 +45,6 @@ const updateCircle = () => {
     circle.style.left = position.x + 'px'
     circle.style.top = position.y + 'px'
     circle.style.position = 'absolute'
-
 }
 
 updateCircle()
